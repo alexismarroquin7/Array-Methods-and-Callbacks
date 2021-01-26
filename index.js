@@ -4,6 +4,11 @@ import { fifaData } from './fifa.js';
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
+const finals2014 = fifaData.filter(function(item){
+    return item.Year === 2014 && item.Stage === 'Final';
+});
+
+console.log(finals2014);
 
 //(a) Home Team name for 2014 world cup final
 
@@ -19,16 +24,17 @@ Practice accessing data by console.log-ing the following pieces of data note, yo
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
 1. Receive data as a parameter
-2. Return an array of objects with the data of the teams that made it to the final stage
+2. Return an array of objects with the data of the teams that
+made it to the final stage
 
 hint - you should be looking at the stage key inside of the objects
 */
-
-function getFinals(/* code here */) {
-   /* code here */
+function getFinals(data){
+    let newArray = [];
+    return newArray;
 }
 
-
+console.log(getFinals(fifaData));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use the higher-order function called getYears to do the following: 
