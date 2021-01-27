@@ -32,7 +32,7 @@ hint - you should be looking at the stage key inside of the objects
 
 function getFinals(data){
     return data.filter(function(item){
-        return item.Stage = 'Final';
+        return item.Stage === 'Final';
     });
 }
 
@@ -46,7 +46,7 @@ Use the higher-order function called getYears to do the following:
 
 function getYears(array, getFinalsCB){
     return getFinalsCB(array).map(function(item){
-        return item.Year
+        return item.Year;
     })
 }
 
@@ -86,18 +86,16 @@ hint: the strings returned need to exactly match the string in step 4.
 
 function getWinnersByYear(array, getYearsCB, getWinnersCB) {
     /* code here */
-    // return getYears(array), getWinners(array).map(function(items){return `In ${items.Year}, ${items[x]} won the world cup!`});
-    const myYears = getYearsCB(array);
-    const myWinners = getWinnersCB(array);
+    const myYears = getYearsCB(array, getFinals);
+    console.log(myYears);
+    const myWinners = getWinnersCB(array, getFinals);
 
-    const myArray = [];
+    // const myArray = [];
 
 
-    myYears.forEach(function(banana){
-        return banana.Year
+    return myYears.map((item, i) => {
+        return `In ${item}, ${myWinners[i]} won the world cup!`
     });
-
-    myWinner
 
 }
 
