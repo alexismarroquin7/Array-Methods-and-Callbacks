@@ -84,10 +84,24 @@ Use the higher-order function getWinnersByYear to do the following:
 hint: the strings returned need to exactly match the string in step 4.
  */
 
-function getWinnersByYear(/* code here */) {
+function getWinnersByYear(array, getYearsCB, getWinnersCB) {
     /* code here */
+    // return getYears(array), getWinners(array).map(function(items){return `In ${items.Year}, ${items[x]} won the world cup!`});
+    const myYears = getYearsCB(array);
+    const myWinners = getWinnersCB(array);
+
+    const myArray = [];
+
+
+    myYears.forEach(function(banana){
+        return banana.Year
+    });
+
+    myWinner
+
 }
 
+console.log(getWinnersByYear(fifaData, getYears, getWinners));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
